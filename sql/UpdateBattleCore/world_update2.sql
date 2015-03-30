@@ -79,5 +79,5 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (14347, 0, 3, 0, 61, 0, 100, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, "Highlord Demitrian - close gossip");
 
 -- FIX Valkiria 
-UPDATE `creature_template` SET `speed_walk` = 0.642857, `speed_run` = 0.642857 `InhabitType` = 5, `flags_extra` = 0, `mechanic_immune_mask` = 12584976 WHERE `entry` IN (36609, 39120, 39121, 39122);
+UPDATE `creature_template` SET `speed_walk` = 0.642857, `speed_run` = 0.642857, `InhabitType` = 5, `flags_extra` = 0, `mechanic_immune_mask` = 12584976 WHERE `entry` IN (36609, 39120, 39121, 39122);
 
