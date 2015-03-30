@@ -1443,12 +1443,13 @@ class npc_valkyr_shadowguard : public CreatureScript
 			{
 				_events.Reset();
 				me->SetReactState(REACT_PASSIVE);
-				//me->SetSpeed(MOVE_FLIGHT, 0.642857f, true);
+				me->SetSpeed(MOVE_FLIGHT, 0.442857f, true);
+                me->SetSpeed(MOVE_FLIGHT, 0.442857f, true);
 				me->SetSpeed(MOVE_FLIGHT, 0.2f, true);
 				me->SetSpeed(MOVE_RUN, 0.2f, true);
 				me->ApplySpellImmune(0, IMMUNITY_STATE, SPELL_AURA_MOD_TAUNT, true);
 				me->ApplySpellImmune(0, IMMUNITY_EFFECT, SPELL_EFFECT_KNOCK_BACK, true);
-				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_GRIP, true);
+				//me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_GRIP, true);
 				DoCast(me, SPELL_WINGS_OF_THE_DAMNED, false);
 
 			}
@@ -1484,8 +1485,8 @@ class npc_valkyr_shadowguard : public CreatureScript
                 if (me->HealthBelowPctDamaged(50, damage))
                 {
                     _events.Reset();
-					me->SetSpeed(MOVE_FLIGHT, 0.642857f, true);
-					me->SetSpeed(MOVE_RUN, 0.642857f, true);
+					me->SetSpeed(MOVE_FLIGHT, 0.442857f, true);
+					me->SetSpeed(MOVE_RUN, 0.442857f, true);
                     DoCastAOE(SPELL_EJECT_ALL_PASSENGERS);
                     me->GetMotionMaster()->MoveTargetedHome();
                     me->ClearUnitState(UNIT_STATE_EVADE);

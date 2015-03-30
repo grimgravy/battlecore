@@ -80,4 +80,4 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 
 -- FIX Valkiria 
 UPDATE `creature_template` SET `speed_walk` = 0.642857, `speed_run` = 0.642857, `InhabitType` = 5, `flags_extra` = 0, `mechanic_immune_mask` = 12584976 WHERE `entry` IN (36609, 39120, 39121, 39122);
-
+UPDATE creature SET `position_z`='843.878' WHERE id='22515' AND map='631' AND `position_z`='845.878';
