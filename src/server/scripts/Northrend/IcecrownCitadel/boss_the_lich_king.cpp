@@ -1444,7 +1444,8 @@ class npc_valkyr_shadowguard : public CreatureScript
 				_events.Reset();
 				me->SetReactState(REACT_PASSIVE);
 				me->SetSpeed(MOVE_FLIGHT, 0.442857f, true);
-                me->SetSpeed(MOVE_FLIGHT, 0.442857f, true);
+                me->SetSpeed(MOVE_RUN, 0.442857f, true);
+                me->SetSpeed(MOVE_WALK, 0.442857f, true);
 				me->SetSpeed(MOVE_FLIGHT, 0.2f, true);
 				me->SetSpeed(MOVE_RUN, 0.2f, true);
 				me->ApplySpellImmune(0, IMMUNITY_STATE, SPELL_AURA_MOD_TAUNT, true);
@@ -1487,6 +1488,7 @@ class npc_valkyr_shadowguard : public CreatureScript
                     _events.Reset();
 					me->SetSpeed(MOVE_FLIGHT, 0.442857f, true);
 					me->SetSpeed(MOVE_RUN, 0.442857f, true);
+                    me->SetSpeed(MOVE_WALK, 0.442857f, true);
                     DoCastAOE(SPELL_EJECT_ALL_PASSENGERS);
                     me->GetMotionMaster()->MoveTargetedHome();
                     me->ClearUnitState(UNIT_STATE_EVADE);
