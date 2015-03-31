@@ -4655,7 +4655,8 @@ SpellCastResult Spell::CheckCast(bool strict)
         if (!(_triggeredCastFlags & TRIGGERED_IGNORE_CASTER_AURASTATE) && m_caster->ToPlayer()->HasFlag(PLAYER_FLAGS, PLAYER_ALLOW_ONLY_ABILITY))
             return SPELL_FAILED_SPELL_IN_PROGRESS;
 
-        if (m_caster->ToPlayer()->HasSpellCooldown(m_spellInfo->Id))
+		// Shadowform fix
+		if (m_caster->ToPlayer()->HasSpellCooldown(m_spellInfo->Id) && (m_spellInfo->Id != 15473))
         {
             if (m_triggeredByAuraSpell)
                 return SPELL_FAILED_DONT_REPORT;
