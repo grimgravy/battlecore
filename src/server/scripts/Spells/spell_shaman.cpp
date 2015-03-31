@@ -840,13 +840,19 @@ class spell_sha_lava_lash : public SpellScriptLoader
                 {
                     int32 damage = GetEffectValue();
                     int32 hitDamage = GetHitDamage();
-                    if (caster->GetItemByPos(INVENTORY_SLOT_BAG_0, EQUIPMENT_SLOT_OFFHAND))
-                    {
-                        // Damage is increased by 25% if your off-hand weapon is enchanted with Flametongue.
-                        if (caster->GetAuraEffect(SPELL_AURA_DUMMY, SPELLFAMILY_SHAMAN, 0x200000, 0, 0))
-                            AddPct(hitDamage, damage);
-                        SetHitDamage(hitDamage);
-                    }
+					// Damage is increased by 25% if your off-hand weapon is enchanted with Flametongue.
+					if (Item* offhand = caster->ToPlayer()->GetItemByPos(INVENTORY_SLOT_BAG_0, EQUIPMENT_SLOT_OFFHAND))
+					{
+						if (uint32 enchant = offhand->GetEnchantmentId(TEMP_ENCHANTMENT_SLOT))
+						{
+							SpellItemEnchantmentEntry const *pEnchant = sSpellItemEnchantmentStore.LookupEntry(enchant);
+
+							if (SpellEntry const *spellInfo = sSpellStore.LookupEntry(pEnchant->spellid[0]))
+							if (spellInfo->SpellFamilyFlags[0] & 0x00200000)
+								AddPct(hitDamage, damage);
+
+							SetHitDamage(hitDamage);
+						}
                 }
             }
 
