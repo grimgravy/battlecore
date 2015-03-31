@@ -3009,8 +3009,11 @@ void SpellMgr::LoadSpellInfoCorrections()
             case 36350: // They Must Burn Bomb Aura (self)
                 spellInfo->Effects[EFFECT_0].TriggerSpell = 36325; // They Must Burn Bomb Drop (DND)
                 break;
-            case 49838: // Stop Time
-                spellInfo->AttributesEx3 |= SPELL_ATTR3_NO_INITIAL_AGGRO;
+			case 49838: // Stop Time
+			case 53651: // Light's Beacon (Hidden periodic aura on Beacon of Light target)
+			case 50259: // Daze from Feral Charge - Cat
+			case 49376: // Feral Charge - Cat            
+				spellInfo->AttributesEx3 |= SPELL_ATTR3_NO_INITIAL_AGGRO;
                 break;
 			case 66: // Invisibility
 			case 35009: // Invisibility
