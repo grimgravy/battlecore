@@ -3018,6 +3018,9 @@ void SpellMgr::LoadSpellInfoCorrections()
 				spellInfo->AttributesEx3 |= SPELL_ATTR3_NO_INITIAL_AGGRO;
 				spellInfo->AttributesCu |= SPELL_ATTR0_CU_NO_INITIAL_THREAT;
 				break;
+			case 72968: // Precious's Ribbon
+				spellInfo->AttributesEx3 |= SPELL_ATTR3_DEATH_PERSISTENT;
+				break;
             case 61407: // Energize Cores
             case 62136: // Energize Cores
             case 54069: // Energize Cores
