@@ -11,6 +11,7 @@ void AddSC_System_Censure();
 void AddSC_boss_apothecary_trio();
 void AddSC_rewarded_player();
 void AddSC_AwardsForTime();
+void AddSC_argent_tournamet_custom();
 
 /* This is where custom scripts should be added. */
 void AddSC_custom()
@@ -25,4 +26,5 @@ void AddSC_custom()
 	AddSC_boss_apothecary_trio();
 	AddSC_rewarded_player();
 	AddSC_AwardsForTime();
+    AddSC_argent_tournamet_custom();
 }
