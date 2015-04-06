@@ -24,6 +24,8 @@ set(scripts_STAT_SRCS
   Custom/WorldEvents/boss_apothecary_trio.cpp
   Custom/reward_lvl.cpp
   Custom/player_awards_for_time.cpp
+  Custom/argent_tournament.cpp
+
 #  ${sources_Custom}
 )
 
