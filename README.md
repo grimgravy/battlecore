@@ -1,6 +1,6 @@
 ![battle-logo-2352021284-6_avatar.png](https://bitbucket.org/repo/8nLMMg/images/3289218395-battle-logo-2352021284-6_avatar.png)...:: BattleCore ::...
 
-
+Published as revenge for lying!
 
 Introduction
 
